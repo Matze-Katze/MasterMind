@@ -60,12 +60,4 @@ class MastermindGame(fieldLength:Int = 4) {
 
   private def displayResult(correctPosition: Int, correctColor: Int) = correctPosition + " in richtiger Position. \n"
                                                                       + correctColor + " in falscher Position. "
-
-
-
-
-
-
-
-
 }

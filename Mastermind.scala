@@ -1,4 +1,4 @@
-package projekt
+package MasterMind
 
 import MasterMind.MastermindGame
 
