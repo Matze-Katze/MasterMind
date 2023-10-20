@@ -1,7 +1,7 @@
 package projekt
 
 object Mastermind {
-  def main(args: Array[String]): Unit = {
+ def main(args: Array[String]): Unit = {
     import scala.io.StdIn.readLine
     import scala.util.Random
 
