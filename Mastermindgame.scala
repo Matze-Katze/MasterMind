@@ -3,17 +3,18 @@ package MasterMind
 import scala.io.StdIn.readLine
 import scala.util.Random
 
-class MastermindGame(fieldLength:Int = 4) {
+class Mastermindgame(fieldLength:Int = 4) {
   private val attempts = fieldLength * 3
   import Color._
   def startGame(): Unit = {
 
     println("Willkommen bei Mastermind!")
-    println(s"Bitte Bringen Sie $fieldLength Farben aus ${Color.toString()} in richtige Position ein!!")
+    println(s"Bitte Bringen Sie $fieldLength Farben aus ${Color.values} in richtige Position ein!!")
     val rndColor = randomColorGenerator()
     var currentAttempts = 1
     while (currentAttempts <= attempts)
-      rndColor.foreach(c => print(c.toString +", \n"))
+      rndColor.foreach(c => print(c.toString +", "))
+      println()
 
       val (colorposition, color) = checkGuess(rndColor, input())
       println(colorposition + ", " + color)
