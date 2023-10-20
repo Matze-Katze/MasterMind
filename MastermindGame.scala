@@ -38,8 +38,6 @@ class MastermindGame(fieldLength:Int = 4) {
   private def input() : List[Color] = {
     println(s"Bitte wählen Sie $fieldLength Farben aus ${Color.values.toString()}: ")
     readLine().split(", ").toList.map(i =>Color.withName(i))
-
-
   }
   private def checkGuess(rndColor:List[Color], input:List[Color]) : (Int, Int) = {
     val correctPosition = input.zip(rndColor).count{case (i, r) => i == r}
