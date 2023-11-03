@@ -1,6 +1,6 @@
-package Mastermindgame
+package de.hwtg.Mastermindgame
 
-import Mastermindgame.Mastermindcontroll
+import de.hwtg.Mastermindgame.Mastermindcontroll
 
 
 object Mastermind {

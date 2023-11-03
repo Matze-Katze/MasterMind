@@ -1,4 +1,4 @@
-package Mastermindgame
+package de.hwtg.Mastermindgame
 
 
 
@@ -40,15 +40,15 @@ class Mastermindcontroll(fieldLength:Int = 4) {
 
   private def input() : List[Color] = {
     println(s"Bitte wählen Sie $fieldLength Farben aus ${Color.values.toList}: ")
-    readLine().split(", ").toList.map(i =>Color.withName(colorspelling(i)))
+    readLine().split("( )*,( )*").toList.map(i =>Color.withName(colorspelling(i)))
   }
 
   private def colorspelling(color:String):String=color match
-    case "R" | "Rot" => "Red"
-    case "B" | "Blau" => "Blue"
-    case "G" | "Grün" => "Green"
-    case "Y" | "Gelb" => "Yellow"
-    case "O" | "Orang" => "Orange"
+    case "r"|"R"|"Rot" => "Red"
+    case "b"|"B"|"Blau" => "Blue"
+    case "g"|"G"|"Grün" => "Green"
+    case "y"|"Y"|"Gelb" => "Yellow"
+    case "o"|"O"|"Orang" => "Orange"
     case _=>color
   private def checkGuess(rndColor:List[Color], input:List[Color]) : (Int, Int) = {
     val correctPosition = input.zip(rndColor).count{case (i, r) => i == r}

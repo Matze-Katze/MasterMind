@@ -1,4 +1,4 @@
-package Mastermindgame
+package de.hwtg.Mastermindgame
 
 protected object Color extends Enumeration {
   type Color = Value
