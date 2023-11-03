@@ -1,4 +1,4 @@
-package de.hwtg.MastermindTest
+package de.hwtg.se.MastermindTest
 
 object Tests {
   def main(args: Array[String]): Unit = {

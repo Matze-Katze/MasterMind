@@ -1,11 +1,9 @@
-package de.hwtg.Mastermindgame
-
-
+package de.hwtg.se.Mastermindgame
 
 import scala.io.StdIn.readLine
 import scala.util.Random
 
-class Mastermindcontroll(fieldLength:Int = 4) {
+class MasterMindControl(fieldLength:Int = 4) {
   private val attempts = fieldLength * 3
   import Color.*
   def startGame(): Unit = {
