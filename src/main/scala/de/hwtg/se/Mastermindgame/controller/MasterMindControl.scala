@@ -1,14 +1,15 @@
-package de.hwtg.se.Mastermindgame
+package de.hwtg.se.Mastermindgame.controller
+
+import de.hwtg.se.Mastermindgame.model.Color
 
 import scala.io.StdIn.readLine
 import scala.util.Random
 
 class MasterMindControl(fieldLength:Int = 4) {
   private val attempts = fieldLength * 3
-  import Color.*
+  import de.hwtg.se.Mastermindgame.model.Color.*
   def startGame(): Unit = {
 
-    println("Willkommen bei Mastermind!")
     println(s"Bitte Bringen Sie $fieldLength Farben aus ${Color.values} in richtige Position ein!!")
     val rndColor = randomColorGenerator()
     var currentAttempts = 1
@@ -48,6 +49,7 @@ class MasterMindControl(fieldLength:Int = 4) {
     case "y"|"Y"|"Gelb" => "Yellow"
     case "o"|"O"|"Orang" => "Orange"
     case _=>color
+
   private def checkGuess(rndColor:List[Color], input:List[Color]) : (Int, Int) = {
     val correctPosition = input.zip(rndColor).count{case (i, r) => i == r}
     println(rndColor.toSet.toString())

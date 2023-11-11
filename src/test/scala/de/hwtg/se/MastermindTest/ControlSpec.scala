@@ -1,5 +1,8 @@
 package de.hwtg.se.MastermindTest
 
-class ControlSpec {
+import de.hwtg.se.Mastermindgame.controller.MasterMindControl
+import org.scalatest.wordspec.AnyWordSpec
+
+class ControlSpec extends AnyWordSpec{
 
 }
