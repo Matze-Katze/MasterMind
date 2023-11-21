@@ -6,7 +6,7 @@ import de.hwtg.se.Mastermindgame.controller.MasterMindControl
 
 object MasterMind {
   def main(args: Array[String]): Unit = {
-    TUI(4);
+    TUI(4)
   }
 
 }
